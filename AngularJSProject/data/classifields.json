@@ -1,0 +1,53 @@
+[
+    {
+        "id":"1",
+        "title": "First Item",
+        "price": "10000",
+        "description": "This is a beautiful Dog which makes you happier than ever.You can give anything you would like to give.This have nice habit of watching you friends and makes them happier.",
+        "posted":"2015-10-25",
+        "contact":{
+            "name":"Venkadesh",
+            "phone":"(555) 555-5555",
+            "email":"venkadesh@urjanet.com"
+        },
+        "categories":[
+            "Pets",
+            "Dogs"
+        ],
+        "image":"img/3.jpg"
+    },
+    {
+        "id":"2",
+        "title": "Second Item",
+        "price": "35000",
+        "description": "This is a beautiful Dog which makes you happier than ever.You can give anything you would like to give.This have nice habit of watching you friends and makes them happier.",
+        "posted":"2015-02-14",
+        "contact":{
+            "name":"Abdul",
+            "phone":"(333) 333-3333",
+            "email":"abdul@urjanet.com"
+        },
+        "categories":[
+            "Pets",
+            "Dogs"
+        ],
+        "image":"img/14.jpg"
+    },
+    {
+        "id":"3",
+        "title": "Third Item",
+        "price": "25000",
+        "description": "This is a beautiful Dog which makes you happier than ever.You can give anything you would like to give.This have nice habit of watching you friends and makes them happier.",
+        "posted":"2015-01-15",
+        "contact":{
+            "name":"Asik Ali",
+            "phone":"(444) 444-4444",
+            "email":"asikali@urjanet.com"
+        },
+        "categories":[
+            "Pets",
+            "Dogs"
+        ],
+        "image":"img/5.jpg"
+    }
+]

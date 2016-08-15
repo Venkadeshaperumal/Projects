@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simpleTable</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/mdi/css/materialdesignicons.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+ <body ng-app="webApp" ng-controller="firstContrl" ng-cloak >
+  	
+
+ 	<md-toolbar>
+ 		<div class="md-toolbar-tools">
+ 			<p><strong>ngClassifields</strong></p>
+ 			<md-button ng-click="openSideNav()">
+ 				<md-icon class="mdi mdi-plus-circle"></md-icon>
+ 				NewClassifield
+ 			</md-button>
+ 		</div>
+ 	</md-toolbar>
+
+ 	<md-sidenav class="md-sidenav-left md-whiteframe-z2"
+ 		md-component-id="left" flex=50 >
+ 		<md-toolbar >
+ 			<h1 class="md-toolbar-tools">Add a classifids</h1>
+ 		</md-toolbar>
+ 		<md-content layout-padding>
+ 			<form>
+ 			<md-input-container>
+ 				<label for="title">Title</label>
+ 				<input type="text" id="title" md-autofocus ng-model="classifield.title" />
+ 			</md-input-container>
+ 			<br>
+            <md-input-container>
+                <label for="price">Price</label>
+                <input type="text" id="Price" ng-model="classifield.price" />
+ 			</md-input-container>
+            <br>
+            <md-input-container>
+                <label for="description">Description</label>
+                <textarea type="text" id="description" ng-model="classifield.description"></textarea>
+ 			</md-input-container>
+            <br>
+            <br>
+            <md-input-container>
+                <label for="image">ImageUrl</label>
+                <input type="text" id="image" ng-model="classifield.image" />
+ 			</md-input-container>
+ 			<md-button ng-click="saveClassifield(classifield)" class="md-primary">
+ 				Save
+ 			</md-button>
+ 			<md-button class="md-warn" ng-click=openCloseNav()>
+ 				Cancel
+ 			</md-button>
+            
+            <pre> {{classifield | json}}</pre>
+            </form>
+ 		</md-content>
+ 	</md-sidenav>		
+
+
+ 	<md-content class="md-padding" layout="row" layout-wrap>
+ 		<md-card ng-repeat="classifield in classifields" flex="30">
+ 			<img ng-src="{{classifield.image }}">
+ 			<md-card-content>
+ 				<div class="ng-classifields-info" ng-hide="showContact">
+ 					<h2 class="md-title">{{ classifield.title }}</h2>
+                    <h2>{{classifield.posted | date}}</h2>
+ 					<h3>{{ classifield.price | currency}}</h3>
+ 					<p>{{ classifield.description }}</p>
+<!--                    <pre>{{classifield | json}}</pre>-->
+ 				</div>
+                <div class="classifield-contact" ng-show="showContact">
+                    <p><md-icon class="mdi mdi-account"></md-icon>{{classifield.contact.name}}</p>
+                    <p><md-icon class="mdi mdi-phone"></md-icon>{{classifield.contact.phone}}</p>
+                    <p><md-icon class="mdi mdi-email"></md-icon>{{classifield.contact.email}}</p>
+                </div>
+                <div latout="row">
+                    <md-button ng-click="showContact=true">Contact</md-button>
+                    <md-button ng-click="showContact=false">Details</md-button>
+                </div>
+ 			</md-card-content>
+ 		</md-card>
+
+ 	</md-content>
+     
+	
+	<script  src="node_modules/angular_1/angular.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-aria/angular-aria.js"></script>
+	<script src="node_modules/angular-material/angular-material.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="components/first.ctrl.js"></script>
+   </body>
+</html>
